@@ -14,17 +14,31 @@
     cd transmeet-UI
     ```
 
-3. Export the environment variable
+3. Configure environment variables
+
+- Recommended (create a local `.env` file): copy the example and fill your keys:
 
     ```bash
+    cp .env.example .env
+    # edit .env and add your keys
+    ```
+
+- Alternatively set them in your shell for a single session:
+
+    ```bash
+    # Unix / macOS
     export GROQ_API_KEY=your_groq_api_key
     export OPENAI_API_KEY=your_openai_api_key
+
+    # Windows PowerShell
+    $env:GROQ_API_KEY = 'your_groq_api_key'
+    $env:OPENAI_API_KEY = 'your_openai_api_key'
     ```
 
 4. Run the Docker container
 
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
 5. Access the application
